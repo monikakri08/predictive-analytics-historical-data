@@ -1,7 +1,5 @@
 <div align="center">
 
-![Banner](banner.png)
-
 # 📈 Predictive Analytics Using Historical Data
 
 **Historical sales data se future trends forecast karne wala machine learning project**
@@ -21,7 +19,6 @@
 - [Key Highlights](#-key-highlights)
 - [Dataset](#-dataset)
 - [Methodology](#-methodology)
-- [Visual Walkthrough](#-visual-walkthrough)
 - [Results](#-results)
 - [Project Structure](#-project-structure)
 - [Getting Started](#-getting-started)
@@ -62,48 +59,6 @@ Retail store ka **monthly sales data (Jan 2021 - Dec 2025), 60 records**, jisme 
 | 6. Evaluation | MAE, RMSE, MAPE, R-squared, residual analysis |
 | 7. Forecast | Best model ko poore data par retrain karke 2026 forecast |
 
-## 🖼️ Visual Walkthrough
-
-### 1. Data Cleaning
-Raw data mein missing values aur outliers the (red dots). Cleaning ke baad data model-ready ho gaya.
-
-<p align="center">
-  <img src="01_raw_sales.png" width="48%" alt="Raw Sales"/>
-  <img src="02_cleaned_sales.png" width="48%" alt="Cleaned Sales"/>
-</p>
-
-### 2. Trend and Seasonality
-Data ko trend, seasonal aur residual components mein todke dekha. Har saal same seasonal pattern repeat hota hai.
-
-<p align="center">
-  <img src="03_decomposition.png" width="95%" alt="Seasonal Decomposition"/>
-</p>
-<p align="center">
-  <img src="04_seasonality.png" width="75%" alt="Yearly Seasonality"/>
-</p>
-
-### 3. Model Comparison
-<p align="center">
-  <img src="05_model_comparison.png" width="85%" alt="Model Comparison"/>
-</p>
-
-### 4. Actual vs Predicted (Test Period: 2025)
-<p align="center">
-  <img src="06_actual_vs_predicted.png" width="95%" alt="Actual vs Predicted"/>
-</p>
-
-### 5. Residual Analysis (Best Model)
-<p align="center">
-  <img src="07_residuals.png" width="85%" alt="Residuals"/>
-</p>
-
-### 6. Sales Forecast for 2026
-<p align="center">
-  <img src="08_future_forecast.png" width="95%" alt="2026 Forecast"/>
-</p>
-
----
-
 ## 📈 Results
 
 ### Model Comparison (Test Period: 2025)
@@ -113,6 +68,14 @@ Data ko trend, seasonal aur residual components mein todke dekha. Har saal same 
 | Holt-Winters | 1128.46 | 1507.86 | 2.83 | 0.68 |
 | Random Forest | 2486.69 | 2910.02 | 6.09 | -0.21 |
 | Naive Seasonal (Baseline) | 4177.42 | 4472.12 | 10.70 | -1.86 |
+
+### Visualizations
+<p align="center">
+  <img src="06_actual_vs_predicted.png" width="95%" alt="Actual vs Predicted"/>
+</p>
+<p align="center">
+  <img src="08_future_forecast.png" width="95%" alt="2026 Forecast"/>
+</p>
 
 ### Key Insights
 - **Linear Regression** (trend + seasonality features) sabse best raha, **MAPE sirf 2.63%**.
@@ -127,14 +90,7 @@ predictive-analytics-historical-data/
 ├── Predictive_Analytics_Historical_Data.ipynb   # Main notebook (code + outputs)
 ├── historical_sales_raw.csv                     # Raw dataset (missing values + outliers ke saath)
 ├── forecast_2026.csv                            # 2026 forecast with range
-├── banner.png                                   # README banner
-├── 01_raw_sales.png
-├── 02_cleaned_sales.png
-├── 03_decomposition.png
-├── 04_seasonality.png
-├── 05_model_comparison.png
 ├── 06_actual_vs_predicted.png
-├── 07_residuals.png
 ├── 08_future_forecast.png
 └── README.md
 ```
